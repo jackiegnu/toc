@@ -1,0 +1,23 @@
+{
+  "name": "toc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phodal/toc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phodal/toc/issues"
+  },
+  "homepage": "https://github.com/phodal/toc#readme",
+  "dependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
