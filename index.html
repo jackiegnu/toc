@@ -13,11 +13,12 @@
 <div id="output"></div>
 
 <script>
-    var converter = new showdown.Converter({ extensions: ['toc', 'custom-header-id'] }),
-    text = '#hello, markdown! \n##你好 \nhello\n---\n[toc]',
-    html = converter.makeHtml(text);
+  var converter = new showdown.Converter({ extensions: ['toc'] });
+  converter.setFlavor('github');
+  var  text = 'hello, markdown!\n===\n你好\n--- \nhello\n---\n[toc]';
+  var  html = converter.makeHtml(text);
 
-    $('#output').html(html);
+  $('#output').html(html);
 </script>
 </body>
 </html>
