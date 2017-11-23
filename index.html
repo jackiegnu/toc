@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Phodal's Markdown Toc Online</title>
+  <meta charset="UTF-8">
+  <title>Phodal's Markdown Toc Online</title>
+  <script src="js/showdown.min.js"></script>
+  <script src="js/showdown.toc.js"></script>
 </head>
 <body>
 
+
+<script>
+    var converter = new showdown.Converter({ extensions: ['toc'] }),
+    text = '#hello, markdown!',
+    html = converter.makeHtml(text);
+
+  console.log(html);
+</script>
 </body>
 </html>
