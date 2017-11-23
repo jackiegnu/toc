@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Phodal's Markdown Toc Online</title>
   <script src="js/showdown.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/showdown.toc.js"></script>
+  <script src="js/showdown.custom-header-id.js"></script>
 </head>
 <body>
 
 <div id="output"></div>
 
 <script>
-    var converter = new showdown.Converter({ extensions: ['toc'] }),
+    var converter = new showdown.Converter({ extensions: ['toc', 'custom-header-id'] }),
     text = '#hello, markdown! \n##你好 \nhello\n---\n[toc]',
     html = converter.makeHtml(text);
 
