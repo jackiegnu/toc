@@ -12,8 +12,8 @@
 <div id="output"></div>
 
 <script>
-    var converter = new showdown.Converter({ extensions: ['showdown-toc'] }),
-    text = '#hello, markdown! \n## hello \nhello\n---\n[toc]',
+    var converter = new showdown.Converter({ extensions: ['toc'] }),
+    text = '#hello, markdown! \n##你好 \nhello\n---\n[toc]',
     html = converter.makeHtml(text);
 
     $('#output').html(html);
