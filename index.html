@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <title>Phodal's Markdown Toc Online</title>
   <script src="js/showdown.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/showdown.toc.js"></script>
 </head>
 <body>
 
+<div id="output"></div>
 
 <script>
-    var converter = new showdown.Converter({ extensions: ['toc'] }),
-    text = '#hello, markdown!',
+    var converter = new showdown.Converter({ extensions: ['showdown-toc'] }),
+    text = '#hello, markdown! \n## hello \nhello\n---\n[toc]',
     html = converter.makeHtml(text);
 
-  console.log(html);
+    $('#output').html(html);
 </script>
 </body>
 </html>
